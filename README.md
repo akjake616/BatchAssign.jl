@@ -39,7 +39,7 @@ The macro can also be used to assign arrays to variables:
 @all A B C = zeros(2, 3)
 ```
 
-It is noted that calling the following got disctinct random values for the vaairables:
+It is noted that calling the following will assign disctinct random values for the vaairables:
 
 ```julia
 @all a b c = rand()
