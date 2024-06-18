@@ -1,5 +1,6 @@
-
 # BatchAssign.jl
+
+[![Build Status](https://github.com/akjake616/BatchAssign.jl/actions/workflows/CI.yml/badge.svg)](https://github.com/akjake616/BatchAssign.jl/actions/workflows/CI.yml)
 
 The `BatchAssign.jl` module provides a convenient way to perform batch assignments in Julia using the macro `@all`. By leveraging metaprogramming techniques in Julia, this macro can assign a single value to multiple variables in one line, making your code cleaner and more concise.
 
