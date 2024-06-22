@@ -33,18 +33,29 @@ This line will assign the value `1` to variables `a`, `b`, and `c` simultaneousl
 a, b, c, = 1, 1, 1 # or, 
 a = b = c = 1
 ```
-
-The macro can also be used to assign arrays to variables:
-
-```julia
-@all A B C = zeros(2, 3)
-```
-
 It is noted that calling the following will assign disctinct random values for the vaairables:
 
 ```julia
 @all a b c = rand()
 ```
+
+<br>
+
+The macro is particularly useful for batch assignment of array to several variables:
+
+```julia
+@all A B C = zeros(2, 3) # case A
+```
+
+which is ***NOT*** the same as the following:
+
+```julia
+A = B = C = zeros(2, 3) # case B
+```
+
+since changing the elements in one of the array in case B will affect the others (Julia arrays are assigned by reference).
+
+<br>
 
 The `@all` macro also supports compound assignments such as +=, -=, *=, and /=. This allows you to update multiple variables simultaneously:
 
