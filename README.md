@@ -33,7 +33,7 @@ This line will assign the value `1` to variables `a`, `b`, and `c` simultaneousl
 a, b, c, = 1, 1, 1 # or, 
 a = b = c = 1
 ```
-It is noted that calling the following will assign disctinct random values for the vaairables:
+It is noted that calling the following will assign disctinct random values for the variables:
 
 ```julia
 @all a b c = rand()
@@ -57,7 +57,7 @@ since changing the elements in one of the array in case B will affect the others
 
 <br>
 
-The `@all` macro also supports compound assignments such as +=, -=, *=, and /=. This allows you to update multiple variables simultaneously:
+The `@all` macro also supports compound assignments such as +=, -=, *=, and /= (and also the broadcasted ones). This allows you to update multiple variables simultaneously:
 
 ```julia
 @all a b c += 1
