@@ -44,16 +44,16 @@ It is noted that calling the following will assign disctinct random values for t
 The macro is particularly useful for batch assignment of array to several variables:
 
 ```julia
-@all A B C = zeros(2, 3) # case A
+@all A B C = zeros(2, 3) # case 1
 ```
 
-which is ***NOT*** the same as the following:
+The above is ***NOT*** the same as the following:
 
 ```julia
-A = B = C = zeros(2, 3) # case B
+A = B = C = zeros(2, 3) # case 2
 ```
 
-since changing the elements in one of the array in case B will affect the others (Julia arrays are assigned by reference).
+since changing the elements in one of the array in case 2 will affect the others (Julia arrays are assigned by reference).
 
 <br>
 
